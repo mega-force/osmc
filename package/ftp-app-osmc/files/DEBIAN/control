@@ -1,0 +1,10 @@
+Origin: OSMC
+Package: ftp-app-osmc
+Version: 1.1.3
+Section: utils
+Essential: No
+Depends: vsftpd
+Architecture: all
+Priority: optional
+Maintainer: Sam G Nazarko <email@samnazarko.co.uk>
+Description: FTP extension for OSMC with prepopulated configuration

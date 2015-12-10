@@ -1,0 +1,7 @@
+Origin: OSMC
+Version: 1.5.4
+Section: tasks
+Essential: No
+Priority: required
+Maintainer: Sam G Nazarko <email@samnazarko.co.uk>
+Description: First-time-run scripts for OSMC

@@ -1,0 +1,12 @@
+Origin: OSMC
+Version: 16.0.5000-1
+Section: video
+Essential: No
+Priority: required
+Provides: xbmc, kodi
+Conflicts: xbmc, kodi
+Maintainer: Sam G Nazarko <email@samnazarko.co.uk>
+Description: Media Center package for OSMC
+Architecture: armhf
+Installed-Size: 97502
+Package: rbp1-mediacenter-osmc

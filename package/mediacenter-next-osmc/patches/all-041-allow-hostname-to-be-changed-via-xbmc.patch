@@ -1,0 +1,33 @@
+From 7818b74c3ce63b166fd5c60643c48bf83f42f484 Mon Sep 17 00:00:00 2001
+From: Sam Nazarko <email@samnazarko.co.uk>
+Date: Sun, 20 Sep 2015 14:45:37 +0100
+Subject: [PATCH] Allow hostname to be changed via xbmc.sethostname()
+
+Signed-off-by: Sam Nazarko <email@samnazarko.co.uk>
+---
+ xbmc/interfaces/legacy/ModuleXbmc.cpp | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/xbmc/interfaces/legacy/ModuleXbmc.cpp b/xbmc/interfaces/legacy/ModuleXbmc.cpp
+index 59517ba..7dac73d 100644
+--- a/xbmc/interfaces/legacy/ModuleXbmc.cpp
++++ b/xbmc/interfaces/legacy/ModuleXbmc.cpp
+@@ -111,6 +111,15 @@ namespace XBMCAddon
+         CApplicationMessenger::GetInstance().PostMsg(TMSG_EXECUTE_BUILT_IN, -1, -1, nullptr, function);
+     }
+ 
++    void sethostname(const char* hostname)
++    {
++      XBMC_TRACE;
++      if (! hostname)
++      return;
++      CSettings::GetInstance().SetString("services.devicename", hostname);
++    }
++
++
+     String executeJSONRPC(const char* jsonrpccommand)
+     {
+       XBMC_TRACE;
+-- 
+2.1.4
+

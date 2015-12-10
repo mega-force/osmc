@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$1" = "install" -o "$1" = "upgrade" ]
+then
+	if ischroot; then exit 0; fi
+
+	if ! grep /boot /proc/mounts -q; then echo "/boot is not mounted!"; exit 1; fi
+
+	# This prevents vfat symlink errors
+
+	rm -rf /boot/LICENCE.broadcom /boot/start_x.elf /boot/fixup_x.dat /boot/bootcode.bin
+fi
